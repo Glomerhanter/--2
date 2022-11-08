@@ -1,0 +1,17 @@
+bilets = int(input('Введите количество билетов: '))
+money = 0
+for i in range(bilets):
+    age = int(input(f'Введите возраст для {i + 1} билета: '))
+    if age < 18:
+        money += 0
+    if 17 < age < 26:
+        money += 990
+    if age > 25:
+        money += 1390
+if bilets >= 3:
+    moneysum = money - money * 10 / 100
+
+print(f'Вам нужно заплотить {moneysum} рублей')
+
+
+
